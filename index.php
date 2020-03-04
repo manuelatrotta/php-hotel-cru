@@ -1,14 +1,8 @@
 <?php
 include 'database.php';
+include 'partials/header.php';
  ?>
 
- <!DOCTYPE html>
- <html lang="en" dir="ltr">
-   <head>
-     <meta charset="utf-8">
-     <link rel="stylesheet" href="dist/app.css">
-     <title>php-hotel-crud</title>
-   </head>
    <body>
      <table>
        <thead>
