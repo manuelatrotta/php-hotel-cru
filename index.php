@@ -20,11 +20,17 @@ include 'database.php';
          </tr>
        </thead>
        <tbody>
+         <?php if (!empty($rooms)) {
+           foreach ($rooms as $room) { ?>
          <tr>
            <td></td>
            <td></td>
-           <td></td>
+           <td> <a href="#">VIEW</a> </td>
+           <td><a href="#">UPDATE</a></td>
+           <td><a href="#">DELETE</a></td>
          </tr>
+        <?php }
+          } ?>
        </tbody>
      </table>
 
