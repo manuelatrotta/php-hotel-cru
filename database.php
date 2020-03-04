@@ -8,7 +8,7 @@
     die();
   }
 
-  $sql = "SELECT * FROM 'stanze' ";
+  $sql = " SELECT * FROM 'stanze'";
   $result = $conn ->query($sql);
   //var_dump($result);
   if ($result && $result->num_rows > 0) {
