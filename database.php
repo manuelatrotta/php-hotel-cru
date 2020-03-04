@@ -8,4 +8,8 @@
     die();
   }
 
+  $sql = "SELECT * FROM 'stanze' ";
+  $result = $conn ->query($sql);
+  var_dump($result);
+
  ?>
