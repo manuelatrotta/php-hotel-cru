@@ -8,9 +8,9 @@
     die();
   }
 
-  $sql = " SELECT * FROM 'stanze'";
+  $sql = " SELECT * FROM ospiti";
   $result = $conn ->query($sql);
-  //var_dump($result);
+  var_dump($result);
   if ($result && $result->num_rows > 0) {
   $rooms = [];
   while($row = $result->fetch_assoc()) {
