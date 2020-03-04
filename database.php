@@ -10,6 +10,18 @@
 
   $sql = "SELECT * FROM 'stanze' ";
   $result = $conn ->query($sql);
-  var_dump($result);
+  //var_dump($result);
+  if ($result && $result->num_rows > 0) {
+  $rooms = [];
+  while($row = $result->fetch_assoc()) {
 
- ?>
+    $rooms[] = $row;
+    }
+  } elseif ($result) {
+    echo "No result";
+  } else {
+    echo "Query error";
+}
+  $conn->close();
+
+?>
