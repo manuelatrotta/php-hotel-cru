@@ -17,11 +17,18 @@ include 'partials/header.php';
          <?php if (!empty($rooms)) {
            foreach ($rooms as $room) { ?>
          <tr>
-           <td></td>
-           <td></td>
+           <td><?php echo $room['id']; ?></td>
+           <td><?php echo $room['room_number']; ?></td>
+           <td><?php echo $room['floor']; ?></td>
+           <td><a href="show/show.php?id=<?php echo $room['id']; ?>">VIEW</a></td>
            <td> <a href="#">VIEW</a> </td>
            <td><a href="#">UPDATE</a></td>
-           <td><a href="#">DELETE</a></td>
+           <td> <form class="" action="delete/delete.php" method="post" >
+             <input type="hidden" name="id" value="<?php echo $room['id']; ?>">
+             <input type="submit" name="" value="">
+
+           </form>
+             DELETE</td>
          </tr>
         <?php }
           } ?>
