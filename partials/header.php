@@ -4,6 +4,6 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="http://localhost:8890/php-hotel-crud/dist/app.css">
+  <link rel="stylesheet" href="http://localhost:8890/php-hotel-cru/dist/app.css">
   <title>php-hotel-crud</title>
 </head>
