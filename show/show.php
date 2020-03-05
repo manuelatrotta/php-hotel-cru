@@ -6,7 +6,7 @@ include __DIR__ . '/../partials/header.php';
   <div class="container">
     <div class="row">
       <div class="col-12">
-        <div class="card">
+        <div class="card border border-secondary">
           <ul>
             <?php
             include  'server.php';
