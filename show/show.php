@@ -6,8 +6,7 @@ include __DIR__ . '/../partials/header.php';
   <div class="container">
     <div class="row">
       <div class="col-12">
-        <div class="card border border-secondary">
-          <ul>
+          <ul class="list-group-item list-group-item-dark">
             <?php
             include  'server.php';
             ?>
@@ -16,7 +15,6 @@ include __DIR__ . '/../partials/header.php';
             <li>Room Number <?php echo $room['room_number'] ?></li>
             <li>Beds: <?php echo $room['beds'] ?></li>
           </ul>
-        </div>
       </div>
     </div>
   </div>
