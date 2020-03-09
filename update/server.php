@@ -52,3 +52,4 @@ if (count($result) > 0) {
 }
 else {
   die('La stanza non esiste');
+}

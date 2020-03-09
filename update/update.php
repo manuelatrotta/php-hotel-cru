@@ -1,11 +1,11 @@
 <?php
 include __DIR__ . '/../database.php';
 include __DIR__ . '/../partials/header.php';
-//controllo se il campo $get id non è vuoto e indico la variabile
+
 if (!empty($_GET['id'])) {
   $roomId = $_GET['id'];
 }
-//richiesta tutte le stanze con id room
+
 $sql = "SELECT * FROM `stanze` WHERE `id`='$roomId'";
 
 $result = $conn->query($sql);
@@ -32,7 +32,7 @@ else {
           <input class="form-control" type="text" name="floor" value="<?php echo  $room['floor'] ?>">
         </div>
         <div class="form-group">
-          <label for="beds">Posti letto </label>
+          <label for="beds">Posti letto</label>
           <input class="form-control" type="text" name="beds" value="<?php echo  $room['beds'] ?>">
         </div>
         <div class="form-group">
