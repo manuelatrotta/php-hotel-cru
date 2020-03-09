@@ -15,7 +15,7 @@
     <nav class="navbar navbar navbar-dark bg-danger">
       <div class="navbar-brand text-uppercase">Hotel Booleana</div>
       <ul class="navbar-nav">
-        <li><a " href="<?php echo $basePath ?>">Tutte le stanze</a></li>
+        <li><a href="<?php echo $basePath ?>">Tutte le stanze</a></li>
       </ul>
     </nav>
   </header>

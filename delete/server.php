@@ -11,7 +11,7 @@
   $sql = "SELECT * FROM `stanze` WHERE `id`='$roomId'";
 
   $result = $conn->query($sql);
-
+  //var_dump($result); die();
   if ($result && $result->num_rows == 0) {
     die('Id non corretto');
   }
