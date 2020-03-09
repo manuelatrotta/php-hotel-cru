@@ -6,15 +6,14 @@ include 'partials/header.php';
    <body>
   <div class="container">
     <div class="row">
-      <div class="col-12">
+      <div class="col-12 ">
         <h1>Tutte le stanze</h1>
         <table class="table">
           <thead>
             <tr>
               <td>ID</td>
+              <td>Number room</td>
               <td>floor</td>
-              <td></td>
-              <td></td>
             </tr>
           </thead>
           <tbody>
