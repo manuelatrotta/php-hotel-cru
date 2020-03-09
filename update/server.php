@@ -21,3 +21,10 @@ $roomId = $_POST['id'];
 $beds = $_POST['beds'];
 $floor = $_POST['floor'];
 $roomNumber = $_POST['room_number'];
+
+//ciclo in controllo che se il valore immesso non è un numero segnale all'utente
+foreach($_POST as $key => $value) {
+  if (intval($value) == 0) {
+    die("$key non è un numero");
+  }
+}
