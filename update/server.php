@@ -2,6 +2,7 @@
 //includo i file relativi al database e a env
 include_once __DIR__ . '/../env.php';
 include __DIR__ . '/../database.php';
+include __DIR__ . '/../functions.php';
 
 //controllo che il campo id,beds,floor e room_number non risultino vuoti
 if (empty($_POST['id'])) {
@@ -28,3 +29,26 @@ foreach($_POST as $key => $value) {
     die("$key non è un numero");
   }
 }
+
+$result = getById($conn, 'stanze', $roomId);
+
+
+if (count($result) > 0) {
+
+  $sql = "UPDATE `stanze` SET `room_number` = ?, `beds` = ?, `floor` = ?, `updated_at` = NOW() WHERE id = ?";
+  $stmt = $conn->prepare($sql);
+  $stmt->bind_param("iiii", $roomNumber, $beds, $floor, $roomId);
+  $stmt->execute();
+  $conn->close();
+  // var_dump($stmt); die();
+
+  // $result = $conn->query($sql);
+
+  if ($stmt->affected_rows > 0) {
+    header("Location: $basePath/show/show.php?id=$roomId");
+  } else {
+    echo 'KO';
+  }
+}
+else {
+  die('La stanza non esiste');
